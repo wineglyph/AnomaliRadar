@@ -1,0 +1,35 @@
+# Root data directory only. Do not use a bare "data/" pattern: it would also
+# match the source package directory src/anomaliradar/data/.
+/data/
+
+*.zip
+*.part
+
+# Environments and local tooling
+/.venv/
+/venv/
+.env
+.env.*
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+/build/
+/dist/
+*.egg-info/
+.eggs/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
+
+# Streamlit local state
+.streamlit/secrets.toml

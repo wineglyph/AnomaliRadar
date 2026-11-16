@@ -1,0 +1,118 @@
+{
+  "config_hash": "06954d34ced38410",
+  "falsification_verdicts": {
+    "F1": "PASS",
+    "F2": "PASS",
+    "F3": "PASS",
+    "F4": "PASS",
+    "F5": "PASS",
+    "F6": "PASS",
+    "F7": "PASS",
+    "F8": "PASS",
+    "F9": "PASS"
+  },
+  "falsified_criteria": [],
+  "headline_budget": 1.0,
+  "methods": {
+    "B1_global_z": {
+      "budget": 1.0,
+      "event_recall": "2/4",
+      "event_recall_count": 2,
+      "mean_abs_budget_error_event_folds": 1.039362955701077,
+      "mean_alarms_per_day_event_folds": 1.2494569200753205,
+      "mean_false_alarms_per_day_event_folds": 1.8076988879384088,
+      "tail_realized_per_day": 0.6811352253756261,
+      "tail_relative_budget_error": -0.3188647746243739
+    },
+    "B2_rolling_z": {
+      "budget": 1.0,
+      "event_recall": "0/4",
+      "event_recall_count": 0,
+      "mean_abs_budget_error_event_folds": 1.5434782608695652,
+      "mean_alarms_per_day_event_folds": 1.0434782608695652,
+      "mean_false_alarms_per_day_event_folds": 1.5089820359281436,
+      "tail_realized_per_day": 2.4841402337228717,
+      "tail_relative_budget_error": 1.4841402337228717
+    },
+    "B3_iforest_raw": {
+      "budget": 1.0,
+      "event_recall": "1/4",
+      "event_recall_count": 1,
+      "mean_abs_budget_error_event_folds": 1.4194042517113559,
+      "mean_alarms_per_day_event_folds": 1.7351937253955665,
+      "mean_false_alarms_per_day_event_folds": 1.6467065868263473,
+      "tail_realized_per_day": 0.24040066777963273,
+      "tail_relative_budget_error": -0.7595993322203672
+    },
+    "B4_iforest_context": {
+      "budget": 1.0,
+      "event_recall": "1/4",
+      "event_recall_count": 1,
+      "mean_abs_budget_error_event_folds": 3.779503105590062,
+      "mean_alarms_per_day_event_folds": 3.279503105590062,
+      "mean_false_alarms_per_day_event_folds": 2.1556886227544907,
+      "tail_realized_per_day": 0.44073455759599334,
+      "tail_relative_budget_error": -0.5592654424040067
+    },
+    "P1_A_hybrid": {
+      "budget": 1.0,
+      "event_recall": "1/4",
+      "event_recall_count": 1,
+      "mean_abs_budget_error_event_folds": 0.8028477546549836,
+      "mean_alarms_per_day_event_folds": 0.19715224534501644,
+      "mean_false_alarms_per_day_event_folds": 0.0,
+      "tail_realized_per_day": 1.5225375626043407,
+      "tail_relative_budget_error": 0.5225375626043407
+    },
+    "P2_B_B1": {
+      "budget": 1.0,
+      "event_recall": "1/4",
+      "event_recall_count": 1,
+      "mean_abs_budget_error_event_folds": 1.8416149068322982,
+      "mean_alarms_per_day_event_folds": 1.3416149068322982,
+      "mean_false_alarms_per_day_event_folds": 0.21556886227544908,
+      "tail_realized_per_day": 1.4023372287145244,
+      "tail_relative_budget_error": 0.4023372287145244
+    },
+    "P3_and": {
+      "budget": 1.0,
+      "event_recall": "0/4",
+      "event_recall_count": 0,
+      "mean_abs_budget_error_event_folds": 0.7981366459627329,
+      "mean_alarms_per_day_event_folds": 0.2981366459627329,
+      "mean_false_alarms_per_day_event_folds": 0.21556886227544908,
+      "tail_realized_per_day": 1.5225375626043407,
+      "tail_relative_budget_error": 0.5225375626043407
+    },
+    "P3_or": {
+      "budget": 1.0,
+      "event_recall": "2/4",
+      "event_recall_count": 2,
+      "mean_abs_budget_error_event_folds": 1.6444626614872817,
+      "mean_alarms_per_day_event_folds": 1.5387671521773147,
+      "mean_false_alarms_per_day_event_folds": 0.21556886227544908,
+      "tail_realized_per_day": 0.5609348914858097,
+      "tail_relative_budget_error": -0.43906510851419034
+    },
+    "P3_weighted": {
+      "budget": 1.0,
+      "event_recall": "0/4",
+      "event_recall_count": 0,
+      "mean_abs_budget_error_event_folds": 0.7037065720791189,
+      "mean_alarms_per_day_event_folds": 0.7037065720791189,
+      "mean_false_alarms_per_day_event_folds": 0.7644710578842315,
+      "tail_realized_per_day": 1.4824707846410685,
+      "tail_relative_budget_error": 0.4824707846410685
+    }
+  },
+  "n_falsified": 0,
+  "recommended_configuration": {
+    "alarm_budget_per_day": 1.0,
+    "debounce_minutes": 30,
+    "fusion": "P3_or",
+    "fusion_reason": "union retained",
+    "score_a": "P1_A_hybrid",
+    "score_a_reason": "hybrid context arm retained",
+    "score_b": "P2_B_B1"
+  }
+}

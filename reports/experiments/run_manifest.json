@@ -1,0 +1,542 @@
+{
+  "budgets": [
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "config": {
+    "alarm": {
+      "budgets": [
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "debounce_minutes": 30,
+      "max_alarm_p": 1.0,
+      "solver_extra_grid": 20,
+      "solver_grid": 40
+    },
+    "baseline": {
+      "iforest_estimators": 200,
+      "mad_floor_quantile": 0.5,
+      "random_state": 20201116,
+      "rolling_window": 360
+    },
+    "calibration": {
+      "cells": "state_daytype",
+      "min_reference_rows": 50,
+      "n_min": 200,
+      "n_refuse": 50,
+      "reference_fraction": 0.6666666666666666
+    },
+    "include_tail": true,
+    "primary_context_arm": "hybrid",
+    "primary_score_b": "B1",
+    "score_a": {
+      "channels": [
+        "Reservoirs",
+        "TP3",
+        "H1",
+        "DV_pressure",
+        "Oil_temperature"
+      ],
+      "dispersion_window": 60,
+      "lags": [
+        1,
+        5
+      ],
+      "log1p_scores": true,
+      "ridge_alpha": 1.0,
+      "rolling_windows": [
+        15,
+        60,
+        360
+      ],
+      "scale_floor_quantile": 0.5,
+      "scale_halflife_min": 60.0
+    },
+    "score_b": {
+      "density_target": 200,
+      "hazard_smoothing": 1.0,
+      "min_reference_runs": 50,
+      "variant": "B1"
+    },
+    "seed": 20201116
+  },
+  "config_hash": "06954d34ced38410",
+  "dataset_fingerprint": "420986c98d243c8468e233a5557955956cd4e6e8e457285548f779fcd147aaed",
+  "dataset_summary": {
+    "breaks_longer_than_ffill": 320,
+    "context": {
+      "cells": {
+        "loaded|weekday": 10342,
+        "loaded|weekend": 6590,
+        "offloaded|weekday": 59182,
+        "offloaded|weekend": 21140,
+        "off|weekday": 114155,
+        "off|weekend": 39309,
+        "other|weekday": 1930,
+        "other|weekend": 82
+      },
+      "feature_columns": [
+        "state_lag1",
+        "run_length_lag1_min",
+        "transitions_1h_lag1",
+        "day_type",
+        "hour"
+      ],
+      "feature_nan_share": {
+        "day_type": 0.0,
+        "hour": 0.0,
+        "run_length_lag1_min": 0.176668,
+        "state_lag1": 0.176668,
+        "transitions_1h_lag1": 0.001046
+      },
+      "missing_state_lag1": 54230
+    },
+    "fingerprint": "420986c98d243c8468e233a5557955956cd4e6e8e457285548f779fcd147aaed",
+    "first_timestamp": "2020-02-01 00:00:00",
+    "grid_has_value_rows": 252731,
+    "grid_observed_rows": 252720,
+    "grid_rows": 306960,
+    "grid_wall_clock_hours": 5116.0,
+    "labels": [
+      {
+        "end": "2020-04-19 00:00:00",
+        "event_id": 1,
+        "hours": 24.0,
+        "pdf_label": "#1",
+        "start": "2020-04-18 00:00:00"
+      },
+      {
+        "end": "2020-05-30 06:01:00",
+        "event_id": 2,
+        "hours": 6.517,
+        "pdf_label": "#1 (duplicate)",
+        "start": "2020-05-29 23:30:00"
+      },
+      {
+        "end": "2020-06-07 14:31:00",
+        "event_id": 3,
+        "hours": 52.517,
+        "pdf_label": "#3",
+        "start": "2020-06-05 10:00:00"
+      },
+      {
+        "end": "2020-07-15 19:01:00",
+        "event_id": 4,
+        "hours": 4.517,
+        "pdf_label": "#4",
+        "start": "2020-07-15 14:30:00"
+      }
+    ],
+    "last_timestamp": "2020-09-01 03:59:00",
+    "masks": {
+      "events": [
+        {
+          "combined_minutes": 49,
+          "combined_share": 0.034027777777777775,
+          "event_id": 1,
+          "m1_minutes": 19,
+          "m1_share": 0.013194444444444444,
+          "m2_gap_count": 0,
+          "m2_gap_hours": 0.0,
+          "m2_minutes": 0,
+          "m2_share": 0.0,
+          "m3_minutes": 30,
+          "m3_share": 0.020833333333333332,
+          "usable_minutes": 1391,
+          "window_hours": 24.0,
+          "window_minutes": 1440
+        },
+        {
+          "combined_minutes": 0,
+          "combined_share": 0.0,
+          "event_id": 2,
+          "m1_minutes": 0,
+          "m1_share": 0.0,
+          "m2_gap_count": 0,
+          "m2_gap_hours": 0.0,
+          "m2_minutes": 0,
+          "m2_share": 0.0,
+          "m3_minutes": 0,
+          "m3_share": 0.0,
+          "usable_minutes": 391,
+          "window_hours": 6.517,
+          "window_minutes": 391
+        },
+        {
+          "combined_minutes": 268,
+          "combined_share": 0.08505236432878452,
+          "event_id": 3,
+          "m1_minutes": 0,
+          "m1_share": 0.0,
+          "m2_gap_count": 2,
+          "m2_gap_hours": 3.973056,
+          "m2_minutes": 238,
+          "m2_share": 0.07553157727705491,
+          "m3_minutes": 30,
+          "m3_share": 0.00952078705172961,
+          "usable_minutes": 2832,
+          "window_hours": 52.517,
+          "window_minutes": 3151
+        },
+        {
+          "combined_minutes": 0,
+          "combined_share": 0.0,
+          "event_id": 4,
+          "m1_minutes": 0,
+          "m1_share": 0.0,
+          "m2_gap_count": 0,
+          "m2_gap_hours": 0.0,
+          "m2_minutes": 0,
+          "m2_share": 0.0,
+          "m3_minutes": 0,
+          "m3_share": 0.0,
+          "usable_minutes": 270,
+          "window_hours": 4.517,
+          "window_minutes": 271
+        }
+      ],
+      "global": {
+        "grid_combined_rows": 66778,
+        "grid_combined_share": 0.21754626009903572,
+        "grid_has_value_rows": 252731,
+        "grid_m1_rows": 10155,
+        "grid_m1_share": 0.033082486317435496,
+        "grid_m2_rows": 52108,
+        "grid_m3_after_frozen_rows": 210,
+        "grid_m3_after_gap_rows": 4800,
+        "grid_m3_rows": 5010,
+        "grid_observed_rows": 252720,
+        "grid_rows": 306960,
+        "grid_unmasked_observed_rows": 238179,
+        "grid_unmasked_observed_share": 0.7759284597341674,
+        "grid_wall_clock_hours": 5116.0,
+        "m1_blocks": 7,
+        "m1_max_hours": 51.4306,
+        "m1_native_rows": 50425,
+        "m1_native_share": 0.03324108670831169,
+        "m2_gap_hours": 868.513052,
+        "m2_gaps": 160,
+        "native_rows": 1516948
+      }
+    },
+    "native_rows": 1516948,
+    "segments": 321,
+    "state": {
+      "confirmed_counts": {
+        "loaded": 16932,
+        "off": 153465,
+        "offloaded": 80322,
+        "other": 2012
+      },
+      "confirmed_share": {
+        "loaded": 0.05516,
+        "off": 0.499951,
+        "offloaded": 0.261669,
+        "other": 0.006555
+      },
+      "episodes": {
+        "loaded": 700,
+        "off": 9805,
+        "offloaded": 10071,
+        "other": 175
+      },
+      "other_state_rows": 2012,
+      "other_state_share": 0.006554599947875945,
+      "raw_counts": {
+        "loaded": 30457,
+        "off": 129409,
+        "offloaded": 72585,
+        "other": 20280
+      },
+      "run_length_median_min": {
+        "loaded": 4.0,
+        "off": 14.0,
+        "offloaded": 7.0,
+        "other": 4.0
+      },
+      "segments": 321
+    }
+  },
+  "debounce_minutes": 30,
+  "evaluated_methods": [
+    "B1_global_z",
+    "B2_rolling_z",
+    "B3_iforest_raw",
+    "B4_iforest_context",
+    "Mhyg_P3_or",
+    "Mnone_P3_or",
+    "P1_A_calendar",
+    "P1_A_hybrid",
+    "P1_A_none",
+    "P1_A_state",
+    "P2_B_B1",
+    "P2_B_B3",
+    "P3_and",
+    "P3_or",
+    "P3_or_bonferroni",
+    "P3_weighted",
+    "P3_weighted_l000",
+    "P3_weighted_l025",
+    "P3_weighted_l050",
+    "P3_weighted_l075",
+    "P3_weighted_l100"
+  ],
+  "fold_table": [
+    {
+      "calibration_end": "2020-04-11T00:00:00",
+      "calibration_start": "2020-03-21T00:00:00",
+      "detection_end": "2020-04-18T06:00:00",
+      "detection_start": "2020-04-17T22:00:00",
+      "event_end": "2020-04-19T00:00:00",
+      "event_id": 1,
+      "event_start": "2020-04-18T00:00:00",
+      "fold_id": "1",
+      "inherits_from": null,
+      "refit": true,
+      "test_end": "2020-04-20T00:00:00",
+      "test_start": "2020-04-17T12:00:00",
+      "train_end": "2020-03-21T00:00:00",
+      "train_start": "2020-02-01T00:00:00"
+    },
+    {
+      "calibration_end": "2020-05-22T23:30:00",
+      "calibration_start": "2020-05-01T23:30:00",
+      "detection_end": "2020-05-30T01:07:45",
+      "detection_start": "2020-05-29T21:30:00",
+      "event_end": "2020-05-30T06:01:00",
+      "event_id": 2,
+      "event_start": "2020-05-29T23:30:00",
+      "fold_id": "2",
+      "inherits_from": null,
+      "refit": true,
+      "test_end": "2020-05-31T06:01:00",
+      "test_start": "2020-05-29T11:30:00",
+      "train_end": "2020-05-01T23:30:00",
+      "train_start": "2020-02-01T00:00:00"
+    },
+    {
+      "calibration_end": "2020-05-29T10:00:00",
+      "calibration_start": "2020-05-08T10:00:00",
+      "detection_end": "2020-06-05T16:00:00",
+      "detection_start": "2020-06-05T08:00:00",
+      "event_end": "2020-06-07T14:31:00",
+      "event_id": 3,
+      "event_start": "2020-06-05T10:00:00",
+      "fold_id": "3",
+      "inherits_from": null,
+      "refit": true,
+      "test_end": "2020-06-08T14:31:00",
+      "test_start": "2020-06-04T22:00:00",
+      "train_end": "2020-05-08T10:00:00",
+      "train_start": "2020-02-01T00:00:00"
+    },
+    {
+      "calibration_end": "2020-07-08T14:30:00",
+      "calibration_start": "2020-06-17T14:30:00",
+      "detection_end": "2020-07-15T15:37:45",
+      "detection_start": "2020-07-15T12:30:00",
+      "event_end": "2020-07-15T19:01:00",
+      "event_id": 4,
+      "event_start": "2020-07-15T14:30:00",
+      "fold_id": "4",
+      "inherits_from": null,
+      "refit": true,
+      "test_end": "2020-07-16T19:01:00",
+      "test_start": "2020-07-15T02:30:00",
+      "train_end": "2020-06-17T14:30:00",
+      "train_start": "2020-02-01T00:00:00"
+    },
+    {
+      "calibration_end": "2020-07-08T14:30:00",
+      "calibration_start": "2020-06-17T14:30:00",
+      "detection_end": null,
+      "detection_start": null,
+      "event_end": null,
+      "event_id": null,
+      "event_start": null,
+      "fold_id": "T",
+      "inherits_from": "4",
+      "refit": false,
+      "test_end": "2020-09-01T04:00:00",
+      "test_start": "2020-08-01T00:00:00",
+      "train_end": "2020-06-17T14:30:00",
+      "train_start": "2020-02-01T00:00:00"
+    }
+  ],
+  "numpy": "2.5.4",
+  "pandas": "2.3.3",
+  "python": "3.14.10",
+  "split_table": {
+    "1": {
+      "calibration": {
+        "excluded_label": 0,
+        "excluded_masked": 4762,
+        "excluded_no_context": 4581,
+        "excluded_transition": 9,
+        "excluded_unusable": 4572,
+        "kept": 25340,
+        "window_rows": 30240
+      },
+      "calibration_rows": 25340,
+      "detection_rows": 311,
+      "fold_id": "1",
+      "test": {
+        "excluded_label": 1440,
+        "excluded_masked": 769,
+        "excluded_transition": 9,
+        "excluded_unusable": 28,
+        "kept": 2807,
+        "window_rows": 3600
+      },
+      "test_rows": 2807,
+      "test_window_rows": 3600,
+      "train": {
+        "excluded_label": 0,
+        "excluded_masked": 11596,
+        "excluded_transition": 75,
+        "excluded_unusable": 10950,
+        "kept": 58620,
+        "window_rows": 70560
+      },
+      "train_rows": 58620
+    },
+    "2": {
+      "calibration": {
+        "excluded_label": 0,
+        "excluded_masked": 5408,
+        "excluded_no_context": 5122,
+        "excluded_transition": 15,
+        "excluded_unusable": 5108,
+        "kept": 24550,
+        "window_rows": 30240
+      },
+      "calibration_rows": 24550,
+      "detection_rows": 218,
+      "fold_id": "2",
+      "test": {
+        "excluded_label": 391,
+        "excluded_masked": 235,
+        "excluded_transition": 0,
+        "excluded_unusable": 240,
+        "kept": 2280,
+        "window_rows": 2551
+      },
+      "test_rows": 2280,
+      "test_window_rows": 2551,
+      "train": {
+        "excluded_label": 1440,
+        "excluded_masked": 27226,
+        "excluded_transition": 1204,
+        "excluded_unusable": 23969,
+        "kept": 101664,
+        "window_rows": 131010
+      },
+      "train_rows": 101664
+    },
+    "3": {
+      "calibration": {
+        "excluded_label": 0,
+        "excluded_masked": 9596,
+        "excluded_no_context": 6670,
+        "excluded_transition": 21,
+        "excluded_unusable": 6649,
+        "kept": 20501,
+        "window_rows": 30240
+      },
+      "calibration_rows": 20501,
+      "detection_rows": 480,
+      "fold_id": "3",
+      "test": {
+        "excluded_label": 3151,
+        "excluded_masked": 1576,
+        "excluded_transition": 22,
+        "excluded_unusable": 1597,
+        "kept": 3652,
+        "window_rows": 5311
+      },
+      "test_rows": 3652,
+      "test_window_rows": 5311,
+      "train": {
+        "excluded_label": 1440,
+        "excluded_masked": 28040,
+        "excluded_transition": 1204,
+        "excluded_unusable": 24779,
+        "kept": 109970,
+        "window_rows": 140280
+      },
+      "train_rows": 109970
+    },
+    "4": {
+      "calibration": {
+        "excluded_label": 0,
+        "excluded_masked": 9517,
+        "excluded_no_context": 6024,
+        "excluded_transition": 325,
+        "excluded_unusable": 5700,
+        "kept": 20488,
+        "window_rows": 30240
+      },
+      "calibration_rows": 20488,
+      "detection_rows": 188,
+      "fold_id": "4",
+      "test": {
+        "excluded_label": 271,
+        "excluded_masked": 0,
+        "excluded_transition": 0,
+        "excluded_unusable": 16,
+        "kept": 2415,
+        "window_rows": 2431
+      },
+      "test_rows": 2415,
+      "test_window_rows": 2431,
+      "train": {
+        "excluded_label": 4982,
+        "excluded_masked": 41979,
+        "excluded_transition": 1247,
+        "excluded_unusable": 34752,
+        "kept": 150307,
+        "window_rows": 198150
+      },
+      "train_rows": 150307
+    },
+    "T": {
+      "calibration": {
+        "excluded_label": 0,
+        "excluded_masked": 9517,
+        "excluded_no_context": 6024,
+        "excluded_transition": 325,
+        "excluded_unusable": 5700,
+        "kept": 20488,
+        "window_rows": 30240
+      },
+      "calibration_rows": 20488,
+      "detection_rows": 0,
+      "fold_id": "T",
+      "test": {
+        "excluded_label": 0,
+        "excluded_masked": 8615,
+        "excluded_transition": 30,
+        "excluded_unusable": 8340,
+        "kept": 35940,
+        "window_rows": 44880
+      },
+      "test_rows": 35940,
+      "test_window_rows": 44880,
+      "train": {
+        "excluded_label": 4982,
+        "excluded_masked": 41979,
+        "excluded_transition": 1247,
+        "excluded_unusable": 34752,
+        "kept": 150307,
+        "window_rows": 198150
+      },
+      "train_rows": 150307
+    }
+  },
+  "tail_inherits_from": "4"
+}

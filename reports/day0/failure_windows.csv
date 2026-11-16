@@ -1,0 +1,5 @@
+id,pdf_label,start,end,type,severity,duration_h,rows,rows_expected_at_10s,coverage_pct,motor_median,reservoirs_median,reservoirs_mean_window,reservoirs_mean_prev7d,reservoirs_delta_vs_prev7d,loaded_share_window,loaded_share_prev7d,offloaded_share_window,offloaded_share_prev7d
+1,#1,2020-04-18 00:00:00,2020-04-18 23:59:00,Air leak,High stress,23.98,8657,8632,100.3,5.708,8.836,8.813,8.981,-0.168,0.989,0.16,0.0,0.197
+2,#1 (duplicate),2020-05-29 23:30:00,2020-05-30 06:00:00,Air leak,High stress,6.5,2360,2340,100.9,5.613,8.38,8.404,8.785,-0.381,0.991,0.113,0.008,0.292
+3,#3,2020-06-05 10:00:00,2020-06-07 14:30:00,Air leak,High stress,52.5,17315,18900,91.6,5.527,8.082,8.02,8.983,-0.963,0.99,0.157,0.0,0.292
+4,#4,2020-07-15 14:30:00,2020-07-15 19:00:00,Air leak,High stress,4.5,1622,1620,100.1,5.515,8.215,8.205,9.01,-0.805,0.97,0.188,0.026,0.435

@@ -1,0 +1,80 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using this metadata."
+title: "AnomaliRadar: state-aware, empirically calibrated anomaly detection on MetroPT-3"
+abstract: >-
+  AnomaliRadar is a reproducible research-engineering release for anomaly
+  detection on the MetroPT-3 air-production compressor. It composes causal
+  context-aware value scoring (Score A), confirmed-state persistence scoring
+  (Score B), empirical Mondrian calibration with explicit back-off and refusal,
+  a calibration-only alarm-budget solver, OR fusion, and a 30-minute debounce.
+  The release includes a deterministic experiment runner, frozen artefacts,
+  F1-F9 falsification audit, a test suite and a read-only Streamlit viewer.
+  On the primary 1 alarm/observed-day budget the OR method detects 2 of 4
+  labelled events with 1 false alarm on the four event folds; the unlabelled
+  tail realizes 0.5609 alarms/day. The result is a CONDITIONAL GO with explicit
+  small-sample and calibration limitations.
+version: 0.2.0
+date-released: 2026-11-16
+license: MIT
+repository-code: "https://github.com/wineglyph/AnomaliRadar"
+url: "https://github.com/wineglyph/AnomaliRadar"
+authors:
+  - name: "AnomaliRadar contributors"
+keywords:
+  - anomaly detection
+  - predictive maintenance
+  - MetroPT-3
+  - calibration
+  - conformal prediction
+  - time series
+  - reproducibility
+references:
+  - type: dataset
+    title: "MetroPT-3 Dataset"
+    authors:
+      - family-names: Davari
+        given-names: Narjes
+      - family-names: Veloso
+        given-names: Bruno
+      - family-names: Ribeiro
+        given-names: Rita
+      - family-names: Gama
+        given-names: João
+    year: 2021
+    publisher:
+      name: "UCI Machine Learning Repository"
+    doi: "10.24432/C5VW3R"
+    url: "https://archive.ics.uci.edu/dataset/791/metropt+3+dataset"
+  - type: article
+    title: "Predictive maintenance based on anomaly detection using deep learning for air production unit in the railway industry"
+    authors:
+      - family-names: Davari
+        given-names: Narjes
+      - family-names: Veloso
+        given-names: Bruno
+      - family-names: Ribeiro
+        given-names: Rita P.
+      - family-names: Pereira
+        given-names: Pedro M.
+      - family-names: Gama
+        given-names: João
+    year: 2021
+    conference:
+      name: "IEEE DSAA 2021"
+    doi: "10.1109/DSAA53316.2021.9564181"
+  - type: article
+    title: "The MetroPT dataset for predictive maintenance"
+    authors:
+      - family-names: Veloso
+        given-names: Bruno
+      - family-names: Ribeiro
+        given-names: Rita P.
+      - family-names: Pereira
+        given-names: Pedro M.
+      - family-names: Gama
+        given-names: João
+    year: 2022
+    journal: "Scientific Data"
+    volume: 9
+    issue: 764
+    doi: "10.1038/s41597-022-01877-3"

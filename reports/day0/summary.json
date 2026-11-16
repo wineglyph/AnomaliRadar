@@ -1,0 +1,426 @@
+{
+  "rows": 1516948,
+  "columns": [
+    "timestamp",
+    "TP2",
+    "TP3",
+    "H1",
+    "DV_pressure",
+    "Reservoirs",
+    "Oil_temperature",
+    "Motor_current",
+    "COMP",
+    "DV_eletric",
+    "Towers",
+    "MPG",
+    "LPS",
+    "Pressure_switch",
+    "Oil_level",
+    "Caudal_impulses"
+  ],
+  "n_columns_data": 15,
+  "dtypes": {
+    "timestamp": "datetime64[ns]",
+    "TP2": "float64",
+    "TP3": "float64",
+    "H1": "float64",
+    "DV_pressure": "float64",
+    "Reservoirs": "float64",
+    "Oil_temperature": "float64",
+    "Motor_current": "float64",
+    "COMP": "float64",
+    "DV_eletric": "float64",
+    "Towers": "float64",
+    "MPG": "float64",
+    "LPS": "float64",
+    "Pressure_switch": "float64",
+    "Oil_level": "float64",
+    "Caudal_impulses": "float64"
+  },
+  "missing_required_columns": [],
+  "timestamp_parse_failures": 0,
+  "t_min": "2020-02-01 00:00:00",
+  "t_max": "2020-09-01 03:59:50",
+  "span_days": 213.167,
+  "timestamp_monotonic": true,
+  "duplicate_timestamps": 0,
+  "duplicate_full_rows": 0,
+  "intervals": {
+    "min_s": 8.0,
+    "median_s": 10.0,
+    "mean_s": 12.1412,
+    "max_s": 172918.0,
+    "share_exactly_10s": 0.8817,
+    "count_gt_60s": 331,
+    "count_gt_1h": 160,
+    "max_gap_h": 48.03
+  },
+  "interval_value_counts_top": {
+    "10s": 1337521,
+    "9s": 128277,
+    "12s": 38321,
+    "13s": 7988,
+    "11s": 4471,
+    "21s": 10
+  },
+  "missing_by_column": {},
+  "total_missing_cells": 0,
+  "analog_describe": {
+    "TP2": {
+      "count": 1516948.0,
+      "mean": 1.3678,
+      "std": 3.2509,
+      "min": -0.032,
+      "25%": -0.014,
+      "50%": -0.012,
+      "75%": -0.01,
+      "max": 10.676
+    },
+    "TP3": {
+      "count": 1516948.0,
+      "mean": 8.9846,
+      "std": 0.6391,
+      "min": 0.73,
+      "25%": 8.492,
+      "50%": 8.96,
+      "75%": 9.492,
+      "max": 10.302
+    },
+    "H1": {
+      "count": 1516948.0,
+      "mean": 7.5682,
+      "std": 3.3332,
+      "min": -0.036,
+      "25%": 8.254,
+      "50%": 8.784,
+      "75%": 9.374,
+      "max": 10.288
+    },
+    "DV_pressure": {
+      "count": 1516948.0,
+      "mean": 0.056,
+      "std": 0.3824,
+      "min": -0.032,
+      "25%": -0.022,
+      "50%": -0.02,
+      "75%": -0.018,
+      "max": 9.844
+    },
+    "Reservoirs": {
+      "count": 1516948.0,
+      "mean": 8.9852,
+      "std": 0.6383,
+      "min": 0.712,
+      "25%": 8.494,
+      "50%": 8.96,
+      "75%": 9.492,
+      "max": 10.3
+    },
+    "Oil_temperature": {
+      "count": 1516948.0,
+      "mean": 62.6442,
+      "std": 6.5163,
+      "min": 15.4,
+      "25%": 57.775,
+      "50%": 62.7,
+      "75%": 67.25,
+      "max": 89.05
+    },
+    "Motor_current": {
+      "count": 1516948.0,
+      "mean": 2.0502,
+      "std": 2.3021,
+      "min": 0.02,
+      "25%": 0.04,
+      "50%": 0.045,
+      "75%": 3.8075,
+      "max": 9.295
+    }
+  },
+  "analog_share_near_zero": {
+    "TP2": 0.8415,
+    "TP3": 0.0,
+    "H1": 0.1575,
+    "DV_pressure": 0.9532,
+    "Reservoirs": 0.0,
+    "Oil_temperature": 0.0,
+    "Motor_current": 0.5458
+  },
+  "digital_active_share": {
+    "COMP": 0.837,
+    "DV_eletric": 0.1606,
+    "Towers": 0.9198,
+    "MPG": 0.8327,
+    "LPS": 0.0034,
+    "Pressure_switch": 0.9914,
+    "Oil_level": 0.9042,
+    "Caudal_impulses": 0.9371
+  },
+  "digital_is_binary": {
+    "COMP": true,
+    "DV_eletric": true,
+    "Towers": true,
+    "MPG": true,
+    "LPS": true,
+    "Pressure_switch": true,
+    "Oil_level": true,
+    "Caudal_impulses": true
+  },
+  "regime_share": {
+    "off": 0.5464,
+    "offloaded": 0.2913,
+    "loaded": 0.1491,
+    "other": 0.0132,
+    "start": 0.0
+  },
+  "regime_counts": {
+    "off": 828862,
+    "offloaded": 441859,
+    "loaded": 226140,
+    "other": 20043,
+    "start": 44
+  },
+  "motor_current_by_regime": {
+    "loaded": {
+      "count": 226140,
+      "median": 5.865,
+      "mean": 5.819
+    },
+    "off": {
+      "count": 828862,
+      "median": 0.04,
+      "mean": 0.041
+    },
+    "offloaded": {
+      "count": 441859,
+      "median": 3.765,
+      "mean": 3.773
+    },
+    "other": {
+      "count": 20043,
+      "median": 4.742,
+      "mean": 4.617
+    },
+    "start": {
+      "count": 44,
+      "median": 8.506,
+      "mean": 8.552
+    }
+  },
+  "episode_length_rows": {
+    "loaded": {
+      "count": 15828,
+      "median": 12.0,
+      "max": 7011
+    },
+    "off": {
+      "count": 10393,
+      "median": 71.0,
+      "max": 12470
+    },
+    "offloaded": {
+      "count": 12483,
+      "median": 41.0,
+      "max": 291
+    },
+    "other": {
+      "count": 13695,
+      "median": 1.0,
+      "max": 119
+    },
+    "start": {
+      "count": 44,
+      "median": 1.0,
+      "max": 1
+    }
+  },
+  "cells_regime_daytype_hour": {
+    "n_cells": 222,
+    "min_rows": 1,
+    "median_rows": 4793.5,
+    "cells_below_200": 54,
+    "cells_below_200_at_1min_scale": 78
+  },
+  "regime_daytype_rows": {
+    "loaded|weekday": 151561,
+    "loaded|weekend": 74579,
+    "off|weekday": 617618,
+    "off|weekend": 211244,
+    "offloaded|weekday": 324498,
+    "offloaded|weekend": 117361,
+    "other|weekday": 17443,
+    "other|weekend": 2600,
+    "start|weekday": 33,
+    "start|weekend": 11
+  },
+  "longest_constant_run": {
+    "TP2": {
+      "max_rows": 18515,
+      "max_hours": 51.43,
+      "start": "2020-06-22 15:06:11",
+      "end": "2020-06-25 05:13:16"
+    },
+    "TP3": {
+      "max_rows": 18515,
+      "max_hours": 51.43,
+      "start": "2020-06-22 15:06:11",
+      "end": "2020-06-25 05:13:16"
+    },
+    "H1": {
+      "max_rows": 18515,
+      "max_hours": 51.43,
+      "start": "2020-06-22 15:06:11",
+      "end": "2020-06-25 05:13:16"
+    },
+    "DV_pressure": {
+      "max_rows": 18541,
+      "max_hours": 51.5,
+      "start": "2020-06-22 15:01:53",
+      "end": "2020-06-25 05:13:16"
+    },
+    "Reservoirs": {
+      "max_rows": 18515,
+      "max_hours": 51.43,
+      "start": "2020-06-22 15:06:11",
+      "end": "2020-06-25 05:13:16"
+    },
+    "Oil_temperature": {
+      "max_rows": 18515,
+      "max_hours": 51.43,
+      "start": "2020-06-22 15:06:11",
+      "end": "2020-06-25 05:13:16"
+    },
+    "Motor_current": {
+      "max_rows": 18515,
+      "max_hours": 51.43,
+      "start": "2020-06-22 15:06:11",
+      "end": "2020-06-25 05:13:16"
+    }
+  },
+  "frozen_runs_over_1h": 7,
+  "frozen_rows_share": 0.03324,
+  "rows_after_gap_gt_60s": 331,
+  "failures": [
+    {
+      "id": 1,
+      "pdf_label": "#1",
+      "start": "2020-04-18 00:00:00",
+      "end": "2020-04-18 23:59:00",
+      "type": "Air leak",
+      "severity": "High stress",
+      "duration_h": 23.98,
+      "rows": 8657,
+      "rows_expected_at_10s": 8632,
+      "coverage_pct": 100.3,
+      "motor_median": 5.708,
+      "reservoirs_median": 8.836,
+      "reservoirs_mean_window": 8.813,
+      "reservoirs_mean_prev7d": 8.981,
+      "reservoirs_delta_vs_prev7d": -0.168,
+      "regime_mix": {
+        "loaded": 0.989,
+        "off": 0.011,
+        "other": 0.0
+      },
+      "loaded_share_window": 0.989,
+      "loaded_share_prev7d": 0.16,
+      "offloaded_share_window": 0.0,
+      "offloaded_share_prev7d": 0.197
+    },
+    {
+      "id": 2,
+      "pdf_label": "#1 (duplicate)",
+      "start": "2020-05-29 23:30:00",
+      "end": "2020-05-30 06:00:00",
+      "type": "Air leak",
+      "severity": "High stress",
+      "duration_h": 6.5,
+      "rows": 2360,
+      "rows_expected_at_10s": 2340,
+      "coverage_pct": 100.9,
+      "motor_median": 5.613,
+      "reservoirs_median": 8.38,
+      "reservoirs_mean_window": 8.404,
+      "reservoirs_mean_prev7d": 8.785,
+      "reservoirs_delta_vs_prev7d": -0.381,
+      "regime_mix": {
+        "loaded": 0.991,
+        "offloaded": 0.008,
+        "other": 0.001
+      },
+      "loaded_share_window": 0.991,
+      "loaded_share_prev7d": 0.113,
+      "offloaded_share_window": 0.008,
+      "offloaded_share_prev7d": 0.292
+    },
+    {
+      "id": 3,
+      "pdf_label": "#3",
+      "start": "2020-06-05 10:00:00",
+      "end": "2020-06-07 14:30:00",
+      "type": "Air leak",
+      "severity": "High stress",
+      "duration_h": 52.5,
+      "rows": 17315,
+      "rows_expected_at_10s": 18900,
+      "coverage_pct": 91.6,
+      "motor_median": 5.527,
+      "reservoirs_median": 8.082,
+      "reservoirs_mean_window": 8.02,
+      "reservoirs_mean_prev7d": 8.983,
+      "reservoirs_delta_vs_prev7d": -0.963,
+      "regime_mix": {
+        "loaded": 0.99,
+        "other": 0.01
+      },
+      "loaded_share_window": 0.99,
+      "loaded_share_prev7d": 0.157,
+      "offloaded_share_window": 0.0,
+      "offloaded_share_prev7d": 0.292
+    },
+    {
+      "id": 4,
+      "pdf_label": "#4",
+      "start": "2020-07-15 14:30:00",
+      "end": "2020-07-15 19:00:00",
+      "type": "Air leak",
+      "severity": "High stress",
+      "duration_h": 4.5,
+      "rows": 1622,
+      "rows_expected_at_10s": 1620,
+      "coverage_pct": 100.1,
+      "motor_median": 5.515,
+      "reservoirs_median": 8.215,
+      "reservoirs_mean_window": 8.205,
+      "reservoirs_mean_prev7d": 9.01,
+      "reservoirs_delta_vs_prev7d": -0.805,
+      "regime_mix": {
+        "loaded": 0.97,
+        "offloaded": 0.026,
+        "other": 0.003,
+        "off": 0.001
+      },
+      "loaded_share_window": 0.97,
+      "loaded_share_prev7d": 0.188,
+      "offloaded_share_window": 0.026,
+      "offloaded_share_prev7d": 0.435
+    }
+  ],
+  "total_labeled_hours": 87.48,
+  "labeled_share_of_span": 0.0171,
+  "tp2_near_zero_share_by_regime": {
+    "off": 0.9999,
+    "offloaded": 0.9947,
+    "loaded": 0.0013
+  },
+  "tp2_corr_with_tp3": {
+    "all_rows": -0.011,
+    "tp2_positive_rows": 0.488
+  },
+  "circularity_warning": "Operating regime is derived from Motor_current/DV_eletric, which are themselves the channel that reveals the failures (loaded share 15%->98%). Using regime as context for a score on Motor_current is therefore partly circular and must be handled explicitly.",
+  "normal_before_first_failure_days": 77.0,
+  "clean_after_last_failure_days": 47.37,
+  "rows_before_first_failure": 562564,
+  "rows_after_last_failure": 344233,
+  "frozen_block_overlaps_label": false
+}
